@@ -1,12 +1,14 @@
 name: Build & Deploy
 
 on:
+    schedule:
+        cron: '5 4 * * 2'
     push:
         branches:
             - master
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     steps:
       -
