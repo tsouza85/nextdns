@@ -31,4 +31,6 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm
           push: true
-          tags: latest
+          tags: tsouza85/nextdns:latest
+          secrets: |
+            "github_token=${{ secrets.GITHUB_TOKEN }}"
