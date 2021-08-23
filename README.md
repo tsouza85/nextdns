@@ -10,7 +10,7 @@ Here is an example docker-compose.yml file that will setup docker services.
 version: "3"
 services:
   nextdns:
-    build: .
+    image: tsouza85/nextdns:latest
     container_name: nextdns
     network_mode: "host"
     environment:
