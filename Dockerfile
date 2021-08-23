@@ -5,11 +5,11 @@ EXPOSE 53/udp
 
 RUN apt-get update && apt-get install -y locales && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
-RUN apt update
-RUN apt-get install -fy apt-transport-https gnupg gpgv wget dnsutils
+RUN apt-get install -fy apt-transport-https gnupg gpgv wget
 RUN wget -qO /usr/share/keyrings/nextdns.gpg https://repo.nextdns.io/nextdns.gpg
 RUN echo "deb [signed-by=/usr/share/keyrings/nextdns.gpg] https://repo.nextdns.io/deb stable main" | tee /etc/apt/sources.list.d/nextdns.list
 RUN apt update && apt install nextdns -fy
+RUN apt install dnsutils -fy
 
 RUN rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /var/nextdns
