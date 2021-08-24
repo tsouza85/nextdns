@@ -16,7 +16,7 @@ services:
     environment:
       - NEXTDNS_CONFIG=your_nextdns_id
     ports:
-      - 127.0.0.1:53:53/udp
+      - 53:53/udp
     extra_hosts: #optional
       - "host.local.domain host.local: 192.168.0.10"
     restart: always
