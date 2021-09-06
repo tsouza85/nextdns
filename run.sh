@@ -3,7 +3,7 @@
 NEXTDNS_MAX_TTL=${NEXTDNS_MAX_TTL:-5}
 NEXTDNS_CACHE_SIZE=${NEXTDNS_CACHE_SIZE:-10MB}
 NEXTDNS_CONFIG_ID=$NEXTDNS_CONFIG
-NEXTDNS_ARGUMENTS="-listen :53 -report-client-info -cache-size=${NEXTDNS_CACHE_SIZE} -max-ttl=${NEXTDNS_MAX_TTL}s -auto-activate -use-hosts -timeout 5s -discovery-dns -bogus-priv -max-inflight-requests 256"
+NEXTDNS_ARGUMENTS="-listen :53 -report-client-info -cache-size=${NEXTDNS_CACHE_SIZE} -max-ttl=${NEXTDNS_MAX_TTL}s -use-hosts -timeout 5s -discovery-dns -bogus-priv -max-inflight-requests 256"
 
 echo "Parsing configuration"
 
